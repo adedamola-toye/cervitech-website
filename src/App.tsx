@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./components/Navbar"
+//import Navbar from "./components/Navbar"
 import About from './components/About';
 import Home from './pages/Home';
 import HowItWorks from './components/HowItWorks';
 import Faqs from './components/Faqs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Header from './components/Header';
 
 
 function App() {
   return(
     <Router>
-      <Navbar/>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element = {<About/>}/>
