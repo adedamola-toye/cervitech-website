@@ -5,13 +5,11 @@ import Home from './pages/Home';
 import HowItWorks from './components/HowItWorks';
 import Faqs from './components/Faqs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import Header from './components/Header';
 
 
 function App() {
   return(
     <Router>
-      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element = {<About/>}/>

@@ -138,6 +138,7 @@
     .header{
    
         margin: 0;
+        margin-top: -3rem;
         padding: 2rem;
     }
     .header img{
@@ -155,6 +156,8 @@
     }
     .header p{
         text-align: center;
-        padding:2rem
+        padding:2rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
     }
 }
