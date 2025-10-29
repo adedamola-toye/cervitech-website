@@ -36,6 +36,11 @@ nav {
   color: #4c2a7f;
 }
 
+  .join-btn:hover {
+    background-color: #2c0c56;
+    transform: scale(1.05);
+  }
+
 /*Below laptop to tablet*/
 @media (max-width: 1200px) {
   .nav-section {
