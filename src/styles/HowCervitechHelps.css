@@ -110,7 +110,7 @@
 
   .feature-text {
     margin-top: 1rem;
-    width: 90%;
+    width:90%
   }
 
   .how-helps {
@@ -122,9 +122,57 @@
     margin-left: 2rem;
   }
 
+  .heading {
+    margin-bottom: 7rem;
+  }
+
   .features {
-    margin: -2rem;
     gap: 4rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin: -3em;
+  }
+
+  @media (max-width: 600px) {
+    .how-helps{
+        width: 100%;
+        margin: 0rem auto;
+    }
+
+    .heading h1{
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .heading p{
+        font-size: 20px;
+    }
+    .features {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+
+    }
+    .feature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .feature.exercise .feature-text,
+    .feature.response .feature-text {
+      margin-left: 0;
+    }
+
+    .feature .feature-text{
+        order: 2;
+        width: 90%
+    }
+    .feature img{
+        width: 300px;
+        order: 1
+    }
   }
 }
