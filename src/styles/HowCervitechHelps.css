@@ -50,6 +50,11 @@
 
 .feature-text{
     margin-top:3rem ;
+    width: 55%
+}
+
+.feature.exercise .feature-text, .feature.response .feature-text{
+    margin-left: 3rem;
 }
 .feature-text h1{
     color: #2C0C56;
