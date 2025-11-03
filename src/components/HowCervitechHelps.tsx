@@ -38,8 +38,8 @@ function HowCervitechHelps(){
 
                 <div className="feature response">
                     <div className="feature-text">
-                        <h1>Set Goals</h1>
-                        <p>Allows you to plan ahead and set achievable goals that can work with your daily schedule</p>
+                        <h1>Response Rate</h1>
+                        <p>Helps you to know how well you adjust to a better neck posture overtime</p>
                     </div>
                     <img src={Response} alt="" />
                 </div>

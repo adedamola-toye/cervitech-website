@@ -1,69 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
- 
-.how-helps{
+.how-helps {
+  margin-top: 2rem;
+  font-family: "Work Sans";
+  padding: 5rem;
+  align-content: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading span {
+  color: #431b73;
+  font-weight: 700;
+}
+
+.heading h1 {
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 0.9rem;
+}
+
+.heading p {
+  font-weight: 300;
+  font-size: 24px;
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 4rem;
+}
+
+.feature {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.feature-text {
+  margin-top: 3rem;
+  width: 55%;
+}
+
+.feature.exercise .feature-text,
+.feature.response .feature-text {
+  margin-left: 3rem;
+}
+
+.feature-text h1 {
+  color: #2c0c56;
+  font-weight: 600;
+  font-size: 40px;
+  padding-bottom: 1rem;
+}
+
+.feature-text p {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+/*Small laptop - 1024px*/
+@media (max-width: 1400px) {
+  .feature img {
+    width: 350px;
+  }
+
+  .features {
+    gap: 6rem;
+  }
+
+  .feature-text {
     margin-top: 2rem;
-    font-family: "Work Sans";
-    padding:5rem;
-    align-content: center;
-    width: 80%;
-    margin: 2rem auto;
-}
+  }
 
-.heading{
-    text-align: center;
-    margin-bottom: 5rem;
-}
-
-.heading span{
-    color: #431b73;
-    font-weight: 700;
-
-}
-
-.heading h1{
-    font-weight: 500;
-    font-size: 40px;
-    text-align: center;
-    padding-bottom: 0.9rem;
-}
-
-.heading p{
-    font-weight: 300;
-    font-size: 24px;
-}
-.features{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    gap: 4rem
-}
-
-.feature{
-    display: flex;
-    gap:2rem;
-    justify-content: center;
-    align-content: center;
-
-}
-
-.feature-text{
-    margin-top:3rem ;
-    width: 55%
-}
-
-.feature.exercise .feature-text, .feature.response .feature-text{
-    margin-left: 3rem;
-}
-.feature-text h1{
-    color: #2C0C56;
-    font-weight: 600;
-    font-size: 40px;
-    padding-bottom: 1rem;
-}
-
-.feature-text p{
-    font-weight: 300;
+  .feature-text h1 {
     font-size: 32px;
+  }
+  .feature-text p {
+    font-size: 24px;
+  }
+  .how-helps {
+    width: 85%;
+    margin: 2rem auto;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 1100px) {
+  .feature img {
+    width: 250px;
+  }
+
+  .feature-text h1 {
+    font-size: 28px;
+    padding-bottom: 0.3rem;
+  }
+
+  .feature-text p {
+    font-size: 20px;
+  }
+
+  .feature-text {
+    margin-top: 1rem;
+    width: 90%;
+  }
+
+  .how-helps {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  .feature.exercise .feature-text,
+  .feature.response .feature-text {
+    margin-left: 2rem;
+  }
+
+  .features {
+    margin: -2rem;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
 }
