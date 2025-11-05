@@ -3,7 +3,7 @@
 	/* Purple base with subtle pattern, approximates the reference */
 	--purple-900: #4b1f8a;
 	--purple-800: #5f2aa5;
-	--purple-700: #6c31ba;
+	--purple-700: #2c0c56;
 	--purple-600: #7b3fd1;
 	--purple-500: #8a4ee6;
 	--white: #ffffff;
@@ -14,7 +14,7 @@
 	color: var(--text-on-purple);
 	position: relative;
 	overflow: hidden;
-	padding: 56px 16px 48px;
+	padding: 36px 16px 38px;
 	background:
 		radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 2px, transparent 2.5px) 0 0/28px 28px,
 		radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.06) 2px, transparent 2.5px) 0 0/30px 30px,
@@ -38,7 +38,8 @@
 }
 
 .getintouch__inner {
-	max-width: 1100px;
+	/* Allow three fixed-width columns plus gaps comfortably */
+	max-width: 1240px;
 	margin: 0 auto;
 }
 
@@ -59,11 +60,17 @@
 }
 
 .getintouch__grid {
-	display: grid;
-	grid-template-columns: 1.1fr 1.6fr;
-	gap: 24px 36px;
-	align-items: start;
+	display: flex;                 /* Use flex instead of grid */
+	gap: 24px 32px;                /* horizontal and vertical gap */
+	justify-content: center;       /* center the three columns */
+	align-items: flex-start;       /* align items to the top */
+	width: 100%;
 }
+
+/* Flex column sizing */
+.getintouch__contacts { flex: 0 0 320px; }
+.getintouch__form { flex: 0 0 360px; }
+.getintouch__form1 { flex: 0 0 440px; }
 
 .getintouch__contacts {
 	list-style: none;
@@ -101,11 +108,17 @@
 	text-decoration: underline;
 }
 
-.getintouch__form {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 16px 18px;
-}
+/* Middle column: stack Name and Email vertically at column width */
+.getintouch__form { display: block; }
+.getintouch__form .field { max-width: 100%; }
+.getintouch__form .field label { display: block; margin: 0 0 6px; }
+.getintouch__form .field input { display: block; width: 100%; margin: 0 0 12px; }
+
+/* Right column: message box and button underneath */
+.getintouch__form1 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.getintouch__form1 .field--full { max-width: 100%; }
+.getintouch__form1 .field--full label { display: block; margin: 0 0 6px; }
+.getintouch__form1 .field--full textarea { width: 100%; }
 
 .getintouch__form .field {
 	display: grid;
@@ -116,29 +129,37 @@
 	grid-column: 1 / -1;
 }
 
-.getintouch__form label {
+.getintouch__form label,
+.getintouch__form1 label {
 	font-size: 12px;
 	opacity: 0.95;
 }
 
+/* Unified input/textarea styling across both forms */
 .getintouch__form input,
-.getintouch__form textarea {
+.getintouch__form textarea,
+.getintouch__form1 input,
+.getintouch__form1 textarea {
 	width: 100%;
 	background: var(--white);
 	border: none;
 	border-radius: 10px;
-	padding: 12px 14px;
+	padding: 10px 14px;
 	font: inherit;
 	color: #1a1033;
 	box-shadow: var(--card-shadow);
 }
 
-.getintouch__form textarea {
+.getintouch__form textarea,
+.getintouch__form1 textarea {
 	resize: vertical;
+	min-height: 140px;
 }
 
 .getintouch__form input:focus,
-.getintouch__form textarea:focus {
+.getintouch__form textarea:focus,
+.getintouch__form1 input:focus,
+.getintouch__form1 textarea:focus {
 	outline: none;
 	box-shadow: var(--card-shadow), var(--ring);
 }
@@ -146,7 +167,7 @@
 .actions {
 	grid-column: 1 / -1;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center; /* center button under the message box */
 }
 
 .btn-primary {
@@ -158,14 +179,33 @@
 	border-radius: 8px;
 	cursor: pointer;
 	transition: background 0.2s ease, transform 0.05s ease;
+	width: 100%;
+	max-width: 300px;
 }
 
 .btn-primary:hover { background: rgba(255,255,255,0.08); }
 .btn-primary:active { transform: translateY(1px); }
 
 /* Responsive */
+/* Slightly reduce fixed column widths before stacking */
+@media (max-width: 1100px) {
+	.getintouch__contacts { flex-basis: 280px; }
+	.getintouch__form { flex-basis: 320px; }
+	.getintouch__form1 { flex-basis: 380px; }
+}
+
 @media (max-width: 900px) {
-	.getintouch__grid { grid-template-columns: 1fr; }
+	.getintouch__grid {
+		flex-direction: column;
+		align-items: center;          /* center items horizontally in column layout */
+		width: 100%;
+	}
+	.getintouch__contacts,
+	.getintouch__form,
+	.getintouch__form1 {
+		flex: 0 1 auto;
+		width: min(100%, 520px);      /* keep a comfortable readable width */
+	}
 	.actions { justify-content: center; }
 }
 

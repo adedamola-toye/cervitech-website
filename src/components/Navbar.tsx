@@ -37,7 +37,7 @@ function Navbar() {
         <Link to="privacy-policy" onClick={() => setMenuOpen(false)}>PRIVACY POLICY</Link>
       </nav>
 
-      <button className="join-btn">Join waitlist</button>
+      <button className="join-btn">Download Cervitech</button>
     </div>
   );
 }

@@ -6,9 +6,9 @@ import "../styles/PrivacyPolicy.css";
 
 function PrivacyPolicy() {
     return (
-        <>
+        <div className="policy-page">
             <Navbar />
-            <main className="policy-page">
+            <main>
                 <section className="policy-section">
                     <h1>Privacy Policy</h1>
 
@@ -99,7 +99,7 @@ function PrivacyPolicy() {
                     <Launch />
                 </section>
             </main>
-        </>
+        </div>
     );
 }
 

@@ -91,10 +91,7 @@ function GetInTouch() {
                                 required
                                 placeholder="Your name"
                             />
-                        </div>
-
-                        <div className="field">
-                            <label htmlFor="email">Email</label>
+                             <label htmlFor="email">Email</label>
                             <input
                                 id="email"
                                 type="email"
@@ -105,6 +102,9 @@ function GetInTouch() {
                             />
                         </div>
 
+                    </form>
+
+                    <form className="getintouch__form1" onSubmit={handleSubmit} noValidate>
                         <div className="field field--full">
                             <label htmlFor="message">Message</label>
                             <textarea

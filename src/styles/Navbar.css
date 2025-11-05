@@ -3,7 +3,7 @@
 .nav-section {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 5%;
+  padding:2rem 5%;
   font-family: "Work Sans", sans-serif;
   white-space: nowrap;
 }
