@@ -40,7 +40,7 @@
 }
 
 
-.join-btn {
+.join-btn{
   padding: 40px 100px;
   background-color: #4c2a7f;
   color: white;
@@ -48,16 +48,13 @@
   font-weight: 700;
   font-size: 40px;
   font-style: bold;
+
 }
 
-.up-arrow{
-  display: block;
-  width: 100px;
-  height: 100px;
-  position: relative;
-  top: 750px;
-  right: 2rem
-}
+
+
+
+
 
 /*LAPTOP 1440PX AND BELOW - MEDIUM LAPTOP AND BELOW - 2000PX */
 
@@ -80,17 +77,13 @@
     margin-bottom: 3rem;
   }
 
-  .join-btn {
+   .join-btn {
     font-size: 15.59px;
     padding: 15.59px 77.93px;
     border-radius: 10px;
-  }
+  } 
 
-  .up-arrow{
-    width: 70px;
-    height: 70px;
-    top: 530px;
-  }
+
 
 }
 
@@ -111,12 +104,7 @@
     margin-top: 5rem;
   }
 
-    .up-arrow{
-      width:39px;
-      height: 39px;
-    top: 400px;
-    right: 1rem;
-  }
+
 }
 
 
@@ -143,10 +131,7 @@
         height: 500px;
         margin-right: -5%
     }
-    .up-arrow{
-      top: 350px;
-      right: 1rem;
-  }
+
 }
 
 /*SMALL DEVICES*/
