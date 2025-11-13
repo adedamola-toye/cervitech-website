@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.get-in-touch-section {
+  font-family: "Work Sans", sans-serif;
+  color: #FFFFFF;
+  background-image: url("../assets//Target\ audience\ bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  height:  622px;
+}
+
+.get-in-touch-section .heading h1{
+    font-weight: 500;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.get-in-touch-section .heading p{
+    font-weight: 300;
+    font-weight:lighter;
+    font-size: 24px;
+}
+
+.main{
+    display: flex;
+    width: 80%;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-info{
+    width: 331px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.each-contact span{
+    display: block;
+
+}
+
+.icon{
+    width: 19.2px;
+    height: 24px;
+}
+
+.each-contact{
+    display: flex;
+    gap:1rem;
+}
+
+.each-contact p{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.name-email{
+    display: flex;
+    flex-direction: column;
+    margin-top: -4.5rem;
+    gap: 1rem
+}
+
+.name-input, .email-input{
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+.name-email input{
+    width: 400px;
+    height: 50px;
+    border-radius : 8px;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    margin-top:0.5rem
+}
+.message-input{
+    display: flex;
+    flex-direction: column;
+}
+.message-input textarea{
+    margin-top: 7px;
+    width: 400px;
+    height: 153px;
+    margin-bottom:  1rem;
+    border-radius: 8px;
+    padding: 5px
+}
+
+.send-msg-btn{
+    text-align:center;
+    height: 55px;
+    background-color: #4C2A7F;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: white;
+}
+
+
+.send-msg-btn:hover{
+    box-shadow: 0 0 5px 5px #a789d5f3;
+    transition: all 0.3s ease;
+}
+
+
+
+
