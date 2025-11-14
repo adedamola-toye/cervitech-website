@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 6em;
 overflow-x:hidden
 }
 
@@ -198,9 +198,18 @@ overflow-x:hidden
 }
 
 @media (max-width: 780px) {
+    .get-in-touch-section{
+        padding: 2rem;
+    }
   .get-in-touch-section .heading {
-    width: 380px;
+    width: 500px;
+    margin-bottom: rem;
   }
+
+  .main{
+    margin-top: -3rem;
+  }
+
   .phone-email {
     display: flex;
     flex-direction: column;
@@ -213,6 +222,7 @@ overflow-x:hidden
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    
   }
 
   .main{
@@ -236,4 +246,17 @@ overflow-x:hidden
     width: 330px
    }
 
+}
+
+@media(max-width: 600px){
+    .get-in-touch-section .heading{
+        background-color: red;
+        width: 330px;
+    }
+    .get-in-touch-section .heading h1{
+        font-size: 28px;
+    }
+    .get-in-touch-section .heading p{
+        font-size: 20px;
+    }
 }
