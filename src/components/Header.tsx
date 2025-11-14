@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import "../styles/Navbar.css";
 import IphonePic from "../assets/iPhone 15 Pro 1.png";
 import "../styles/Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -17,9 +18,9 @@ export default function Header() {
             devices and provides posture correction exercises
           </p>
           <div className="join-btn-wrapper"></div>
-          <a href="https://forms.gle/4GwVpzgQ2QqT37fs8" target="_blank" rel="noopener noreferrer">
+          <Link to="/waitlist">
             <button className="join-btn">Join waitlist</button>
-          </a>
+          </Link>
         </div>
         <img
           className="iphone-pic"

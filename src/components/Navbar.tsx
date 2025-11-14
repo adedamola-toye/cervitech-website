@@ -43,9 +43,9 @@ function Navbar() {
         </Link>
       </nav>
 
-      <a href="" target="_blank" rel="noopener noreferrer">
+      <Link to="/waitlist">
         <button className="join-btn">Join waitlist</button>
-      </a>
+      </Link>
     </div>
   );
 }

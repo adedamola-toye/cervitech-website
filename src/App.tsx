@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import HowItWorks from './components/HowItWorks';
 import Faqs from './components/Faqs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-
+import WaitlistForm from "./components/WaitlistForm"
 
 function App() {
   return(
@@ -16,7 +16,7 @@ function App() {
         <Route path="/how-it-works" element ={<HowItWorks/>}/>
         <Route path="/faqs" element ={<Faqs/>}/>
         <Route path="/privacy-policy" element ={<PrivacyPolicy/>}/>
-        
+        <Route path="/waitlist" element={<WaitlistForm />} />
         
       </Routes>
     </Router>

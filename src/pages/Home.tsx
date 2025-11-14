@@ -18,7 +18,7 @@ function Home(){
             <Header/>
             <WhoIsCervitechFor/>
             <HowCervitechHelps/>
-            <AppsPic/>
+            {/* <AppsPic/> */}
             <GetInTouch/>
             <img className="up-arrow" src={UpArrow} alt="Upward arrow" onClick={scrollToTop}/>
         </div>
