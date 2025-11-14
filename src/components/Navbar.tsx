@@ -25,9 +25,7 @@ function Navbar() {
         <img src={Logo} alt="Cervitech logo" />
       </Link>
 
-      <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? "✖" : "☰"}
-      </button>
+      
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <Link to="/about" onClick={() => setMenuOpen(false)}>
           ABOUT
@@ -46,6 +44,9 @@ function Navbar() {
       <Link to="/waitlist">
         <button className="join-btn">Join waitlist</button>
       </Link>
+      <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? "✖" : "☰"}
+      </button>
     </div>
   );
 }

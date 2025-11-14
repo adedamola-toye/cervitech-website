@@ -47,6 +47,7 @@ nav a:active {
   font-size: 2rem;
   cursor: pointer;
   color: #4c2a7f;
+
 }
 
 .join-btn:hover {
@@ -74,16 +75,16 @@ nav a:active {
 @media (max-width: 1000px) {
   .nav-section {
   /* margin: 1.5rem 2rem; */
-    /* padding: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between; 
- */
     position: relative;
     margin:  0;
     width: 100%;
     padding: 1rem 2rem;
     box-sizing: border-box;
+  
   }
 
   .nav-section:hover{
@@ -134,6 +135,13 @@ nav a:active {
     background: rgba(255, 255, 255, 0.1);
   }
 
+  nav a:link,
+nav a:visited,
+nav a:active {
+  color: white; 
+  text-decoration: none;
+}
+
   /* Hide join button below tablet */
   .join-btn {
     display: none;
@@ -159,11 +167,11 @@ nav a:active {
 @media (max-width: 600px) {
   .nav-section img {
     width: 120px;
-    margin-top: 1.2rem;
+    margin-top: 0.7rem;
   }
 
   .nav-section {
-    margin: 1rem;
+    
     display: flex;
     justify-content: space-between; /* keeps logo left, toggle right */
     align-items: center;
