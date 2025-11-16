@@ -4,10 +4,18 @@ import Launch from "../components/Launch";
 import GetInTouch from "../components/GetInTouch";
 import Footer from "../components/Footer";
 import "../styles/PrivacyPolicy.css";
+import UpArrow from "../assets/lets-icons_up-light.png"
+
 
 function PrivacyPolicy() {
+    const scrollToTop = () => {
+    const headerSection = document.getElementById("header");
+    if (headerSection) {
+      headerSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
     return (
-        <div className="policy-page">
+        <div className="policy-page" id="header">
             <Navbar />
             <main>
                 <section className="policy-section">
@@ -102,6 +110,7 @@ function PrivacyPolicy() {
                 <section>
                     <Footer />
                 </section>
+                <img className="up-arrow" src={UpArrow} alt="Upward arrow" onClick={scrollToTop}/>
             </main>
         </div>
     );
