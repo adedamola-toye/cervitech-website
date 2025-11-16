@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Faqs from "../components/Faqs";
 import Launch from "../components/Launch";
 import GetInTouch from "../components/GetInTouch";
+import Footer from "../components/Footer";
 import "../styles/PrivacyPolicy.css";
 
 function PrivacyPolicy() {
@@ -97,6 +98,9 @@ function PrivacyPolicy() {
                 </section>
                 <section className="faq-section">
                     <Launch />
+                </section>
+                <section>
+                    <Footer />
                 </section>
             </main>
         </div>

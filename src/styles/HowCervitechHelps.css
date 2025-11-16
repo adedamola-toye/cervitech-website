@@ -12,6 +12,7 @@
 .heading {
   text-align: center;
   margin-bottom: 5rem;
+
 }
 
 .heading span {
@@ -131,6 +132,7 @@
     margin-top: 3rem;
     margin: -3em;
   }
+}
 
   @media (max-width: 600px) {
     .how-helps{
@@ -138,9 +140,15 @@
         margin: 0rem auto;
     }
 
+    .heading{
+      width: 100%;
+    }
     .heading h1{
+
+        /* width: 100%; */
+       
+        text-align: center;
         font-size: 32px;
-        width: 100%;
     }
 
     .heading p{
@@ -175,4 +183,4 @@
         order: 1
     }
   }
-}
+
