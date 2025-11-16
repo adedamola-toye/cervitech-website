@@ -1,8 +1,9 @@
 import Navbar from "./Navbar";
 import "../styles/Navbar.css";
-import IphonePic from "../assets/iPhone 15 Pro 1.png";
+import IphonePic from "../assets/HeaderIphonePic.png";
 import "../styles/Header.css";
-import { Link } from "react-router-dom";
+import WaitlistButton from "./WaitlistButton";
+import "../styles/WaitlistButton.css"
 
 export default function Header() {
   return (
@@ -18,9 +19,10 @@ export default function Header() {
             devices and provides posture correction exercises
           </p>
           <div className="join-btn-wrapper"></div>
-          <Link to="/waitlist">
+          {/* <Link to="/waitlist">
             <button className="join-btn">Join waitlist</button>
-          </Link>
+          </Link> */}
+          <WaitlistButton className="header-join-btn"/>
         </div>
         <img
           className="iphone-pic"

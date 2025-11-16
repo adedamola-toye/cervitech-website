@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/Cervitech Logo.png";
 import "../styles/Navbar.css";
 import { useState, useEffect, useRef } from "react";
-
+import WaitlistButton from "./WaitlistButton";
+import "../styles/WaitlistButton.css"
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
@@ -41,9 +42,10 @@ function Navbar() {
         </Link>
       </nav>
 
-      <Link to="/waitlist">
+      {/* <Link to="/waitlist">
         <button className="join-btn">Join waitlist</button>
-      </Link>
+      </Link> */}
+      <WaitlistButton className="navbar-btn"/>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? "✖" : "☰"}
       </button>

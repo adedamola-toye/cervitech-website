@@ -30,7 +30,7 @@ nav a:active {
 }
 
 
-.nav-section .join-btn {
+/* .nav-section .join-btn {
   padding: 15.59px 77.93px;
   background-color: #4c2a7f;
   color: white;
@@ -38,7 +38,7 @@ nav a:active {
   font-weight: 700;
   font-size: 15.59px;
   font-style: bold;
-}
+} */
 
 .menu-toggle {
   display: none;
@@ -50,20 +50,20 @@ nav a:active {
 
 }
 
-.join-btn:hover {
+/* .join-btn:hover {
   box-shadow: 0 0 10px 5px #a789d5f3;
   transition: all 0.3s ease;
-}
+} */
 /*Below laptop to tablet*/
 @media (max-width: 1200px) {
   .nav-section {
     margin-left: -2%;
     margin-right: -2%;
   }
-  .join-btn {
+/*   .join-btn {
     padding: 1rem 2.5rem;
     white-space: nowrap;
-  }
+  } */
   .nav-section nav {
     gap: 2rem;
     font-size: 14px;
@@ -143,9 +143,9 @@ nav a:active {
 }
 
   /* Hide join button below tablet */
-  .join-btn {
+/*   .join-btn {
     display: none;
-  }
+  } */
 
   /* Position the menu toggle to the right */
   .menu-toggle {

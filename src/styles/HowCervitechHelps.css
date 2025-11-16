@@ -132,6 +132,7 @@
     margin-top: 3rem;
     margin: -3em;
   }
+}
 
   @media (max-width: 600px) {
     .how-helps{
@@ -182,4 +183,4 @@
         order: 1
     }
   }
-}
+

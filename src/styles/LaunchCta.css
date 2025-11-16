@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.launch-cta-section{
+     font-family: "Work Sans", sans-serif;
+     display: flex;
+     justify-content: space-between;
+    margin: 5rem;
+   /*  margin-left: 5rem; */
+   gap: 1rem;
+   /* flex-wrap: wrap; */
+}
+
+.launch-cta-section .left{
+    flex: 1;
+    min-width: 400px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+
+}
+.launch-cta-section .left h1{
+    font-size: 40px;
+    font-weight: 500;
+
+
+}
+
+.launch-cta-section .left p{
+    font-size: 24px;
+    font-weight: 300;
+
+}
+
+.launch-cta-section img{
+    margin-right: -5rem;
+}
+
+.launch-cta-section .launch-join-btn-mobile {
+  display: none;
+}
+
+/*Small laptop - 1024px*/
+@media (max-width: 1400px) {
+    .launch-cta-section .left h1{
+        font-size: 32px;
+    }
+    .launch-cta-section .left p{
+        font-size: 24px;
+    }
+
+    .launch-cta-section .left{
+        
+}
+    
+}
+
+
+/*Tablet*/
+@media (max-width: 1100px) {
+    .launch-cta-section{
+        gap: 0.2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .launch-cta-section .left{
+        flex: none;
+        width: 40%;
+        min-width: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+       .launch-cta-section .left h1{
+        font-size: 24px;
+    }
+    .launch-cta-section .left p{
+        font-size: 16px;
+    }
+    .launch-cta-section img{
+        width: 500px;
+        height: 400px;
+       margin-left: -2rem;
+    }
+
+
+}
+
+ @media (max-width: 650px) {
+    .launch-cta-section{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem auto;
+        text-align: center;
+    }
+    .launch-cta-section .left{
+        width: 80%
+    }
+
+    .launch-cta-section .left p{
+        margin-top: 2rem;
+    }
+    
+
+
+     .launch-cta-section img{
+        width: 300px;
+        min-width: 200px;
+        height: 200px;
+       margin-left: -2rem;
+        margin-top: -2rem;
+       align-self:center;
+    }
+     .launch-cta-section .launch-join-btn-big-screen {
+    display: none;
+  }
+  .launch-cta-section .launch-join-btn-mobile {
+    display: block;
+    margin-top: 1rem;
+    align-self: center;
+  }
+
+
+
+
+ }

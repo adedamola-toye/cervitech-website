@@ -41,7 +41,7 @@
 }
 
 
-.join-btn{
+/* .join-btn{
   padding: 40px 100px;
   background-color: #4c2a7f;
   color: white;
@@ -50,7 +50,7 @@
   font-size: 40px;
   font-style: bold;
 
-}
+} */
 
 
 
@@ -78,11 +78,11 @@
     margin-bottom: 3rem;
   }
 
-   .join-btn {
+   /* .join-btn {
     font-size: 15.59px;
     padding: 15.59px 77.93px;
     border-radius: 10px;
-  } 
+  }  */
 
 
 
@@ -152,6 +152,7 @@
         height: 200px;
         align-self: center;
         margin: auto;
+        margin-top: 2rem;
     }
     .left{
         margin-top: 1rem;
