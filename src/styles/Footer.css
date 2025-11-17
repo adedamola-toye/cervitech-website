@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+a:link,
+a:visited,
+ a:active {
+  color: white; 
+  text-decoration: none;
+}
 
 .footer-section{
     background-color:#2C0C56;

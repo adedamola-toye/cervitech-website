@@ -35,7 +35,11 @@ function Home(){
             <div id="faqs">
               <Faqs/>
             </div>
-            <GetInTouch/>
+
+            <div id="contact-us">
+               <GetInTouch/>
+            </div>
+           
             <LaunchCtaSection/>
             <Footer/>
             <img className="up-arrow" src={UpArrow} alt="Upward arrow" onClick={scrollToTop}/>

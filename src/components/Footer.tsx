@@ -5,7 +5,24 @@ import TwitterIcon from "../assets/Socials Icons/akar-icons_twitter-fill.png";
 import InstagramIcon from "../assets/Socials Icons/ant-design_instagram-filled.png";
 import LinkedInIncon from "../assets/Socials Icons/akar-icons_linkedin-fill.png";
 import "../styles/Footer.css";
+import { useNavigate, useLocation , Link} from "react-router-dom";
 function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleScroll = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
+    /* setMenuOpen(false); */
+  };
+
   return (
     <div className="footer-section">
       <div className="footer-content">
@@ -20,9 +37,28 @@ function Footer() {
         </div>
 
         <div className="links">
-          <p className="link">FAQs</p>
-          <p className="link">Contact Us</p>
-          <p className="link">Privacy Policy</p>
+          <a
+          href="#faqs"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll("faqs");
+            
+          }}
+        ><p className="link">FAQs</p></a>
+          
+          <a
+          href="#contact-us"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll("contact-us");
+            
+          }}
+        ><p className="link">Contact Us</p></a>
+          
+          <Link to="/privacy-policy" >
+            <p className="link">Privacy Policy</p>
+          
+        </Link>
         </div>
 
         <div className="socials">

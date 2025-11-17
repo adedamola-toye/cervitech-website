@@ -76,7 +76,7 @@ function Navbar() {
           FAQS
         </a>
 
-        <Link to="/privacy-policy" onClick={() => setMenuOpen(false)}>
+        <Link to="privacy-policy" onClick={() => setMenuOpen(false)}>
           PRIVACY POLICY
         </Link>
       </nav>
