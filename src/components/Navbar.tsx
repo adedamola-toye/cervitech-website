@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "../assets/Cervitech Logo.png";
 import "../styles/Navbar.css";
 import { useState, useEffect, useRef } from "react";
 import WaitlistButton from "./WaitlistButton";
-import "../styles/WaitlistButton.css"
+import "../styles/WaitlistButton.css";
 function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
 
@@ -20,24 +22,61 @@ function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleScroll = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <div className="nav-section" ref={navRef}>
       <Link to="/">
         <img src={Logo} alt="Cervitech logo" />
       </Link>
 
-      
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>
+        <a
+          href="#about"
+          onClick={(e) => {
+            e.preventDefault(); 
+            handleScroll("header");
+            setMenuOpen(false);
+          }}
+        >
           ABOUT
-        </Link>
-        <Link to="/how-it-works" onClick={() => setMenuOpen(false)}>
+        </a>
+
+        <a
+          href="#how-it-works"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll("how-it-works");
+            setMenuOpen(false);
+          }}
+        >
           HOW IT WORKS
-        </Link>
-        <Link to="/faqs" onClick={() => setMenuOpen(false)}>
+        </a>
+
+        <a
+          href="#faqs"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll("faqs");
+            setMenuOpen(false);
+          }}
+        >
           FAQS
-        </Link>
-        <Link to="privacy-policy" onClick={() => setMenuOpen(false)}>
+        </a>
+
+        <Link to="/privacy-policy" onClick={() => setMenuOpen(false)}>
           PRIVACY POLICY
         </Link>
       </nav>
@@ -45,7 +84,7 @@ function Navbar() {
       {/* <Link to="/waitlist">
         <button className="join-btn">Join waitlist</button>
       </Link> */}
-      <WaitlistButton className="navbar-btn"/>
+      <WaitlistButton className="navbar-btn" />
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? "✖" : "☰"}
       </button>

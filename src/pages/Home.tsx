@@ -17,11 +17,21 @@ function Home(){
   };
     return(
         <div className="home">
-            <Header/>
+          <div id="header">
+             <Header/>
+          </div>
+           
             <WhoIsCervitechFor/>
-            <HowCervitechHelps/>
+
+            <div id="how-it-works">
+              <HowCervitechHelps/>
+            </div>
+            
             {/* <AppsPic/> */}
-            <Faqs/>
+
+            <div id="faqs">
+              <Faqs/>
+            </div>
             <GetInTouch/>
             <LaunchCtaSection/>
             <Footer/>
