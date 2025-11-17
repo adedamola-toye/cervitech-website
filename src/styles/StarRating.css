@@ -1,0 +1,12 @@
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.stars .filled {
+  color: orange; /* filled stars */
+}
+
+.stars .empty {
+  color: #ccc; /* empty stars */
+}
