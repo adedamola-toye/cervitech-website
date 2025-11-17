@@ -7,14 +7,14 @@
   margin-left: 5%;
   max-width: 100vw;
   overflow-x: hidden;
-
+  max-height: 80vh;
 }
 
-.header img {
+.header .iphone-pic {
   width: 60%;
   height: auto;
   max-width: 1500px;
-  margin-right: -2%;
+  margin-right: -3%;
 }
 
 .left {
@@ -41,7 +41,7 @@
 }
 
 
-.join-btn {
+/* .join-btn{
   padding: 40px 100px;
   background-color: #4c2a7f;
   color: white;
@@ -49,7 +49,13 @@
   font-weight: 700;
   font-size: 40px;
   font-style: bold;
-}
+
+} */
+
+
+
+
+
 
 /*LAPTOP 1440PX AND BELOW - MEDIUM LAPTOP AND BELOW - 2000PX */
 
@@ -72,11 +78,14 @@
     margin-bottom: 3rem;
   }
 
-  .join-btn {
+   /* .join-btn {
     font-size: 15.59px;
     padding: 15.59px 77.93px;
     border-radius: 10px;
-  }
+  }  */
+
+
+
 }
 
 
@@ -95,6 +104,8 @@
   .header{
     margin-top: 5rem;
   }
+
+
 }
 
 
@@ -116,38 +127,51 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    .header img{
+    .header .iphone-pic{
         width:60%;
-        height: 500px
+        height: 500px;
+        margin-right: -5%
     }
-    
+
 }
 
 /*SMALL DEVICES*/
 @media(max-width: 700px){
     .header{
-   
         margin: 0;
         margin-top: -3rem;
         padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .header img{
-        display: none;
+    .header .iphone-pic{
+        display: block;
+        width: 200px;
+        height: 200px;
+        align-self: center;
+        margin: auto;
+        margin-top: 2rem;
     }
     .left{
-        margin: 0;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+       width: 100%;
     }
     .header h1{
         text-align: center;
-        
+        font-size: 28px;
+        width: 350px
     }
     .header p{
         text-align: center;
         padding:2rem;
         margin-top: 0.1rem;
         margin-bottom: 0.1rem;
+        font-size: 20px;
+        width: 400px
     }
 }

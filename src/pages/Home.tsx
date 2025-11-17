@@ -1,16 +1,49 @@
 import Header from "../components/Header";
 import WhoIsCervitechFor from "../components/WhoIsCervitechFor";
-import AppsPic from "../components/AppsPic"
+//import AppsPic from "../components/AppsPic"
 import HowCervitechHelps from "../components/HowCervitechHelps";
-
+import UpArrow from "../assets/lets-icons_up-light.png"
+import "../styles/Home.css"
+import GetInTouch from "../components/GetInTouch";
+import LaunchCtaSection from "../components/LaunchCtaSection";
+import Faqs from "../components/Faqs";
+import Footer from "../components/Footer";
+import Reviews from "../components/Reviews";
 function Home(){
+    const scrollToTop = () => {
+    const headerSection = document.getElementById("header");
+    if (headerSection) {
+      headerSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
     return(
-        <>
-            <Header/>
+        <div className="home">
+          <div id="header">
+             <Header/>
+          </div>
+          
             <WhoIsCervitechFor/>
-            <HowCervitechHelps/>
-            <AppsPic/>
-        </>
+
+            <div id="how-it-works">
+              <HowCervitechHelps/>
+            </div>
+
+            <Reviews/>
+            
+            {/* <AppsPic/> */}
+
+            <div id="faqs">
+              <Faqs/>
+            </div>
+
+            <div id="contact-us">
+               <GetInTouch/>
+            </div>
+           
+            <LaunchCtaSection/>
+            <Footer/>
+            <img className="up-arrow" src={UpArrow} alt="Upward arrow" onClick={scrollToTop}/>
+        </div>
     )
 }
 export default Home;

@@ -21,6 +21,7 @@
   font-weight: 400;
   font-size: 40px;
   text-align: center;
+  width: 600px
 }
 
 span {
@@ -101,4 +102,5 @@ span {
     display: flex;
     flex-direction: column;
   }
+
 }

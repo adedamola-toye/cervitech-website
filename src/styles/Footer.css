@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+a:link,
+a:visited,
+ a:active {
+  color: white; 
+  text-decoration: none;
+}
+
+.footer-section{
+    background-color:#2C0C56;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    padding: 4rem 5% 4rem 5%;
+}
+
+.footer-content{
+    display: flex;
+ /*    gap: 20%; */
+ justify-content: space-between;
+ align-items: center;
+
+
+}
+
+.footer-content .left{
+    flex: 0 0 35%;
+    align-self: center;
+}
+
+.footer-section .left p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-content .links{
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: center;
+
+}
+
+.footer-content .socials{
+    white-space: nowrap;
+    display: flex;
+    align-self: center;
+    gap: 1rem;
+    padding-right: 5rem
+}
+
+
+hr{
+    margin-top: 2rem;
+}
+
+.footer-section footer{
+    padding-top: 1rem;
+}
+
+@media (max-width: 1100px) {
+  
+
+    .footer-content .socials{
+    
+    padding-right: 1rem
+}
+}
+@media (max-width: 800px){
+
+    .footer-content .left img{
+        width: 150px;
+        margin-left: -2.5rem;
+    }
+
+    .socials img{
+        width: 25px;
+    }
+}
+
+/* Small screens - mobile */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; 
+        margin-top: -1rem;
+    }
+
+    .footer-content .left {
+        flex: none;
+        width: 90%; 
+        text-align: center;
+    }
+
+      .footer-content .left img{
+        margin: 0 auto;
+    }
+    
+
+    .footer-content .links {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        width: 100%;
+        margin-top: -1rem;
+    }
+
+    .footer-content .socials {
+        justify-content: center;
+        width: 100%;
+        padding-right: 0;
+        margin-top: 1rem;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .footer-section footer {
+        text-align: center;
+    }
+}
+
+
+

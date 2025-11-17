@@ -1,0 +1,62 @@
+.join-btn{
+  padding: 40px 100px;
+  background-color: #4c2a7f;
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: bold;
+
+}
+
+/* .nav-section .join-btn {
+  padding: 15.59px 77.93px;
+  background-color: #4c2a7f;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15.59px;
+  font-style: bold;
+} */
+
+
+.join-btn:hover {
+  box-shadow: 0 0 10px 5px #a789d5f3;
+  transition: all 0.3s ease;
+}
+
+/*LAPTOP 1440PX AND BELOW - MEDIUM LAPTOP AND BELOW - 2000PX */
+
+@media (max-width: 2700px) {
+   .join-btn {
+    font-size: 15.59px;
+    padding: 15.59px 77.93px;
+    border-radius: 10px;
+  } 
+}
+
+/*Below laptop to tablet*/
+@media (max-width: 1200px) {
+  .join-btn {
+    padding: 1rem 2.5rem;
+    white-space: nowrap;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .navbar-btn {
+    display: none; /* only hides navbar button */
+  }
+  .launch-join-btn-desktop{
+   position: absolute;
+   left: 1.8rem;
+  }
+}
+
+ @media (max-width: 650px) {
+    .launch-join-btn-mobile{
+   position: static;
+   align-self: center;
+  }
+ }

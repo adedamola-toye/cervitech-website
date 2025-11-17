@@ -1,0 +1,20 @@
+.up-arrow {
+  position: fixed;
+  bottom: 8rem;
+  right: 1rem;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 1000;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.up-arrow:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.home{
+  overflow: hidden;
+}
