@@ -13,8 +13,8 @@ function UserCircle({ name }: UserCircleProps) {
     <div
       style={{
         backgroundColor: bgColor,
-        width: "60px",
-        height: "60px",
+        width: "55px",
+        height: "55px",
         borderRadius: "50%",
         display: "flex",
         alignItems: "center",

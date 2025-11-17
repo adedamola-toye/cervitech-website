@@ -88,8 +88,7 @@
   cursor: pointer;
   z-index: 10;
   border-radius: 8px;
-  width: 50px
-
+  width: 50px;
 }
 
 .scroll-btn.left {
@@ -111,13 +110,22 @@
 }
 
 @media (max-width: 600px) {
+  .reviews-heading h1 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .reviews-heading p {
+    font-weight: 300;
+    font-size: 20px;
+  }
   .reviews-cards {
     gap: 1rem;
   }
   .card {
-    flex: 0 0 260px;
+    flex: 0 0 250px;
   }
   .scroll-btn {
-    display: none; /* swipe is enough for mobile */
+    display: none;
   }
 }
