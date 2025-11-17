@@ -6,6 +6,7 @@ import UpArrow from "../assets/lets-icons_up-light.png"
 import "../styles/Home.css"
 import GetInTouch from "../components/GetInTouch";
 import LaunchCtaSection from "../components/LaunchCtaSection";
+import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 function Home(){
     const scrollToTop = () => {
@@ -20,6 +21,7 @@ function Home(){
             <WhoIsCervitechFor/>
             <HowCervitechHelps/>
             {/* <AppsPic/> */}
+            <Faqs/>
             <GetInTouch/>
             <LaunchCtaSection/>
             <Footer/>
