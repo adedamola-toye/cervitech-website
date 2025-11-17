@@ -1,4 +1,4 @@
-import CervitechLogo from "../assets/Cervitech Logo White.png"
+import CervitechLogo from "../assets/Cervitech Logo White.png";
 //import { Link } from "react-router-dom";
 import FacebookIcon from "../assets/Socials Icons/bi_facebook.png";
 import TwitterIcon from "../assets/Socials Icons/akar-icons_twitter-fill.png";
@@ -26,10 +26,32 @@ function Footer() {
         </div>
 
         <div className="socials">
-          <img src={TwitterIcon} alt="Twitter icon" />
-          <img src={InstagramIcon} alt="Instagram icon" />
-          <img src={FacebookIcon} alt="Facebook icon" />
-          <img src={LinkedInIncon} alt="Linked icon" />
+          <a
+            href="https://x.com/cervitech?s=11"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><img src={TwitterIcon} alt="Twitter icon" /></a>
+          
+          <a
+            href="https://www.instagram.com/cervitech_?igsh=MWI4ODRxeTlrdzU3NA%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+              <img src={InstagramIcon} alt="Instagram icon" />
+          </a>
+         
+          <a
+            href="https://www.facebook.com/share/1MWbqr476d/?mibextid=LQQJ4d"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><img src={FacebookIcon} alt="Facebook icon" /></a>
+          
+           <a
+            href="https://www.linkedin.com/in/ashiyat-akodu-25646a3a/"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><img src={LinkedInIncon} alt="Linked icon" /></a>
+          
         </div>
       </div>
 

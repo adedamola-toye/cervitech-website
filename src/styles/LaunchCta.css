@@ -27,6 +27,10 @@
 
 }
 
+.launch-cta-section .left span{
+    color: #2C0C56;
+
+}
 .launch-cta-section .left p{
     font-size: 24px;
     font-weight: 300;
@@ -50,9 +54,7 @@
         font-size: 24px;
     }
 
-    .launch-cta-section .left{
-        
-}
+
     
 }
 

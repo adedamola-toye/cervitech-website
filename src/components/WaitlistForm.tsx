@@ -2,7 +2,7 @@ export default function WaitlistForm() {
   return (
     <div style={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
       <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfs4j2HuF8hvSxYZ8pWbWvF1nBvWZ1wXKqkR4p9Z1hUtUgg/viewform?embedded=true"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd1gdwf5naxvP4UkACmM8NXm5nh75DlQe8o2C1XsKP9w9woZA/viewform"
         width="100%"
         height="900"
         frameBorder="0"

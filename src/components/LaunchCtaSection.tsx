@@ -6,7 +6,7 @@ function LaunchCtaSection() {
   return (
     <div className="launch-cta-section">
       <div className="left">
-        <h1>Be the first to know when the CerviTech App Launches</h1>
+        <h1>Be the first to know when the CerviTech App <span>launches!</span></h1>
         <p>
           Join our waitlist to stay updated on our progress, receive exclusive
           updates, and get ready to take control of your spine health.
