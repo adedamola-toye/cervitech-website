@@ -7,6 +7,8 @@ import Faqs from './components/Faqs'; */
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import WaitlistForm from "./components/WaitlistForm"
 import ScrollToTop from './components/ScrollToTop';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 function App() {
   return(
@@ -18,6 +20,8 @@ function App() {
         <Route path="/how-it-works" element ={<HowItWorks/>}/>
         <Route path="/faqs" element ={<Faqs/>}/> */}
         <Route path="/privacy-policy" element ={<PrivacyPolicy/>}/>
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/waitlist" element={<WaitlistForm />} />
         
       </Routes>
