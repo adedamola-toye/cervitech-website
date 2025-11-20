@@ -1,11 +1,11 @@
 import "../styles/StarRating.css"
 
 interface StarRatingProps {
-  stars: number; // define stars as a number
+  stars: number; //number of stars
 }
 
 function StarRating({ stars }: StarRatingProps) {
-  const totalStars = 5; // total stars possible
+  const totalStars = 5; // maximum number of stars possible (5)
   return (
     <div className="stars">
       {[...Array(totalStars)].map((_, index) => (

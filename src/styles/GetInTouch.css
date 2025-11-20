@@ -129,6 +129,10 @@ overflow-x:hidden
   width: 300px;
 }
 
+.get-in-touch-section .status{
+  font-size: 20px;
+}
+
 /*SMALL LAPTOP*/
 @media (max-width: 1350px) {
   /*  .get-in-touch-section{

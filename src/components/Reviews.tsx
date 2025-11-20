@@ -80,7 +80,7 @@ function Reviews() {
 
   const scroll = (direction: "left" | "right") => {
     if (containerRef.current) {
-      const scrollAmount = 400; // adjust for card width
+      const scrollAmount = 400;
       containerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",

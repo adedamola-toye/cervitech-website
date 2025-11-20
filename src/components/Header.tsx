@@ -10,18 +10,15 @@ export default function Header() {
     <div id="header">
       <Navbar />
       <div className="header" id="header">
-        <div className="left">
+        <div className="left"> 
           <h1>
             Monitor Your <span>Neck Posture</span> With Your Smart Phone
           </h1>
           <p>
             Cervitech helps you correct your neck posture while using your
-            devices and provides posture correction exercises
+            devices and provides posture correction exercises. 
           </p>
           <div className="join-btn-wrapper"></div>
-          {/* <Link to="/waitlist">
-            <button className="join-btn">Join waitlist</button>
-          </Link> */}
           <WaitlistButton className="header-join-btn"/>
         </div>
         <img

@@ -1,9 +1,40 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/GetInTouch.css";
 import LocationIcon from "../assets/Contact icons/Location icon.png";
 import EmailIcon from "../assets/Contact icons/Email icon.png";
 import PhoneIcon from "../assets/Contact icons/Phone icon.png";
 
 function GetInTouch() {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [status, setStatus] = useState<string>("");
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_loxxsau",   // <-- PASTE YOUR SERVICE ID HERE
+        "template_v1g630i",  // <-- PASTE YOUR TEMPLATE ID HERE
+        form.current,
+        "A1ZbI67KMM6aLsIvk"    // <-- PASTE YOUR PUBLIC KEY HERE
+      )
+      .then(
+        (result) => {
+          console.log("EmailJS success:", result.text);
+          setStatus("Message sent successfully! 🎉");
+          form.current?.reset();
+          setTimeout(() => setStatus(""), 4000);
+        },
+        (error) => {
+          console.error("EmailJS failed:", error.text);
+          setStatus("Failed to send message. Please try again later.");
+          setTimeout(() => setStatus(""), 4000);
+        }
+      );
+  };
+
   return (
     <div className="get-in-touch-section">
       <div className="heading">
@@ -14,7 +45,7 @@ function GetInTouch() {
         </p>
       </div>
 
-      {/*   Main section */}
+      {/*Main section */}
       <div className="main">
         {/* Contact info */}
         <div className="contact-info">
@@ -37,26 +68,29 @@ function GetInTouch() {
           </div>
         </div>
 
-        <form action="" className="form">
+        {/* Form  */}
+        <form ref={form} onSubmit={sendEmail} className="form">
           {/* Name and Email */}
           <div className="name-email">
             <div className="name-input">
-              <label htmlFor="">Name</label>
-              <input type="text" required className="input" />
+              <label htmlFor="name">Name</label>
+              {/* Added name="user_name" */}
+              <input type="text" name="user_name" id="name" required className="input" /> 
             </div>
             <div className="email-input">
-              <label htmlFor="">Email</label>
-              <input type="email" required className="input" />
+              <label htmlFor="email">Email</label>
+              {/* Added name="user_email" */}
+              <input type="email" name="user_email" id="email" required className="input" />
             </div>
           </div>
 
           {/* Message */}
           <div className="message">
             <div className="message-input">
-              <label htmlFor="">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
-                name="message"
+                name="message" // This was already correct
                 rows={7}
                 placeholder="Type your message here..."
                 required
@@ -64,10 +98,16 @@ function GetInTouch() {
               ></textarea>
             </div>
 
-            <button className="send-msg-btn">Send Message</button>
+            <button className="send-msg-btn" type="submit">
+              Send Message
+            </button>
           </div>
+          
+         
         </form>
       </div>
+      {/* Status message */}
+      {status && <p className="status">{status}</p>}
     </div>
   );
 }
