@@ -9,30 +9,27 @@ function GetInTouch() {
   const form = useRef<HTMLFormElement | null>(null);
   const [status, setStatus] = useState<string>("");
 
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.current) return;
 
-    emailjs
-      .sendForm(
-        "service_loxxsau",   // <-- PASTE YOUR SERVICE ID HERE
-        "template_v1g630i",  // <-- PASTE YOUR TEMPLATE ID HERE
-        form.current,
-        "A1ZbI67KMM6aLsIvk"    // <-- PASTE YOUR PUBLIC KEY HERE
-      )
-      .then(
-        (result) => {
-          console.log("EmailJS success:", result.text);
-          setStatus("Message sent successfully! 🎉");
-          form.current?.reset();
-          setTimeout(() => setStatus(""), 4000);
-        },
-        (error) => {
-          console.error("EmailJS failed:", error.text);
-          setStatus("Failed to send message. Please try again later.");
-          setTimeout(() => setStatus(""), 4000);
-        }
-      );
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        console.log("EmailJS success:", result.text);
+        setStatus("Message sent successfully! 🎉");
+        form.current?.reset();
+        setTimeout(() => setStatus(""), 4000);
+      },
+      (error) => {
+        console.error("EmailJS failed:", error.text);
+        setStatus("Failed to send message. Please try again later.");
+        setTimeout(() => setStatus(""), 4000);
+      }
+    );
   };
 
   return (
@@ -74,13 +71,23 @@ function GetInTouch() {
           <div className="name-email">
             <div className="name-input">
               <label htmlFor="name">Name</label>
-              {/* Added name="user_name" */}
-              <input type="text" name="user_name" id="name" required className="input" /> 
+              <input
+                type="text"
+                name="user_name"
+                id="name"
+                required
+                className="input"
+              />
             </div>
             <div className="email-input">
               <label htmlFor="email">Email</label>
-              {/* Added name="user_email" */}
-              <input type="email" name="user_email" id="email" required className="input" />
+              <input
+                type="email"
+                name="user_email"
+                id="email"
+                required
+                className="input"
+              />
             </div>
           </div>
 
@@ -90,7 +97,7 @@ function GetInTouch() {
               <label htmlFor="message">Message</label>
               <textarea
                 id="message"
-                name="message" // This was already correct
+                name="message"
                 rows={7}
                 placeholder="Type your message here..."
                 required
@@ -102,12 +109,10 @@ function GetInTouch() {
               Send Message
             </button>
           </div>
-          
-         
         </form>
       </div>
       {/* Status message */}
-      {status && <p className="status">{status}</p>}
+      {status && <p className="status">{status}</p>} 
     </div>
   );
 }

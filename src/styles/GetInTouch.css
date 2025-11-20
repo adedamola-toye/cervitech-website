@@ -13,9 +13,14 @@
   justify-content: center;
   align-items: center;
   padding: 6em;
-overflow-x:hidden
+overflow-x:hidden;
 }
-
+.get-in-touch-section label {
+  color: #ffffff; 
+  font-weight: 500; 
+  text-align: left;
+  font-size: 16px;
+}
 .get-in-touch-section .heading h1 {
   font-weight: 500;
   font-size: 40px;
@@ -92,10 +97,13 @@ overflow-x:hidden
   display: flex;
   flex-direction: column;
   margin-top: 0rem;
+  margin-bottom: 1rem;
+
 }
 .message-input {
   display: flex;
   flex-direction: column;
+  margin-top: -1.3rem;
 }
 .message-input textarea {
   margin-top: 7px;
@@ -113,6 +121,7 @@ overflow-x:hidden
   border: 1px solid #ffffff;
   border-radius: 8px;
   color: white;
+
 }
 
 .send-msg-btn:hover {
@@ -132,6 +141,9 @@ overflow-x:hidden
 .get-in-touch-section .status{
   font-size: 20px;
 }
+
+
+
 
 /*SMALL LAPTOP*/
 @media (max-width: 1350px) {
@@ -175,6 +187,10 @@ overflow-x:hidden
   .name-email {
     align-self: center;
     margin-top: -4.9rem;
+  }
+
+  .message-input{
+    margin-top: -2.2rem;
   }
 }
 
@@ -235,7 +251,7 @@ overflow-x:hidden
   .form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
   }
