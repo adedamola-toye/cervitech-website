@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import WhoIsCervitechFor from "../components/WhoIsCervitechFor";
-//import AppsPic from "../components/AppsPic"
+import AppsPic from "../components/AppsPic"
 import HowCervitechHelps from "../components/HowCervitechHelps";
 import UpArrow from "../assets/lets-icons_up-light.png"
 import "../styles/Home.css"
@@ -30,7 +30,9 @@ function Home(){
 
             <Reviews/>
             
-            {/* <AppsPic/> */}
+            <div id="appsPic">
+              <AppsPic/>
+            </div>
 
             <div id="faqs">
               <Faqs/>
