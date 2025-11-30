@@ -1,10 +1,11 @@
+// src/pages/ForgotPassword.tsx
 import React, { useState } from "react";
 import type { FormEvent } from "react";
 import axios from "axios";
-import "../styles/ForgotPassword.css";
 import { useNavigate } from "react-router-dom";
-import "../styles/Navbar.css"
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "../styles/ForgotPassword.css";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "";
 
@@ -12,32 +13,23 @@ const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState("");
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+  const [emailSent, setEmailSent] = useState(false);
   const navigate = useNavigate();
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setMessage(null);
 
-    if (!email.trim()) {
-      setMessage("Please enter your email address.");
-      return;
-    }
+    if (!email.trim()) return setMessage("Enter your email address.");
 
     try {
       setBusy(true);
-      const resp = await axios.post(`${API_BASE}/api/auth/send-password-reset`, {
+      const resp = await axios.post(`${API_BASE}/auth/request-reset`, {
         email: email.trim().toLowerCase(),
       });
-      
-      setMessage(resp.data?.message || "Reset link sent — check your email.");
-
-      // redirect after short delay
-      setTimeout(() => navigate("/check-email"), 1500);
+      setEmailSent(true);
     } catch (err: any) {
-      setMessage(
-        err?.response?.data?.message ||
-        "Could not send reset link. Make sure the email is registered."
-      );
+      setMessage(err?.response?.data?.message || "Failed to send reset link.");
     } finally {
       setBusy(false);
     }
@@ -48,30 +40,59 @@ const ForgotPassword: React.FC = () => {
       <Navbar />
       <main className="forgot-page">
         <section className="forgot-card">
-          <h2 className="forgot-title">Forgot Password</h2>
-          <p className="forgot-sub">
-            Enter the email for your account — we'll send a reset link.
-          </p>
+          {!emailSent ? (
+            <>
+              <h2>Forgot Password</h2>
+              <p>Enter your email — we'll send a reset link.</p>
 
-          <form className="forgot-form" onSubmit={submit}>
-            <label htmlFor="email" className="label">Email</label>
-            <input
-              id="email"
-              type="email"
-              className="input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
-              required
-            />
-            <button type="submit" className="primary-btn" disabled={busy}>
-              {busy ? "Sending..." : "Send Reset Link"}
-            </button>
-          </form>
+              <form onSubmit={submit}>
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button type="submit" disabled={busy}>
+                  {busy ? "Sending..." : "Send Reset Link"}
+                </button>
+              </form>
 
-          {message && <div className="message">{message}</div>}
+              {message && <p className="message error">{message}</p>}
+            </>
+          ) : (
+            <div className="success-message">
+              <div className="success-icon">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="32" fill="#10b981" fillOpacity="0.1"/>
+                  <path d="M20 32l8 8 16-16" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h2>Check Your Email</h2>
+              <p className="success-text">
+                We've sent a password reset link to <strong>{email}</strong>. 
+                Please check your inbox and follow the instructions to reset your password.
+              </p>
+              <p className="helper-text">
+                Didn't receive the email? Check your spam folder or{" "}
+                <button 
+                  className="link-button" 
+                  onClick={() => setEmailSent(false)}
+                >
+                  try again
+                </button>.
+              </p>
+              <button 
+                className="back-button" 
+                onClick={() => navigate("/login")}
+              >
+                Back to Login
+              </button>
+            </div>
+          )}
         </section>
       </main>
+      <Footer />
     </>
   );
 };
