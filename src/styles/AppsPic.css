@@ -1,8 +1,7 @@
-/* ===========================
-   Base Layout (Large Screens)
-   =========================== */
+
 
 .app-pics {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
