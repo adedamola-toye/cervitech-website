@@ -5,8 +5,11 @@ import "../styles/WhoIsCervitechFor.css"
 function WhoIsCervitechFor(){
     return(
         <div className="target-section">
-            <h1><span>Who's</span> Cervitech for</h1>
+            <div className="target-section-heading">
+                <h1><span>Who's</span> Cervitech for</h1>
             <p>Cervitech serves a broad demographic affected by spinal health challenges</p>
+            </div>
+            
             <div className = "cards">
                 <div className="single-card">
                     <img src={NeckPainIcon} alt="" />

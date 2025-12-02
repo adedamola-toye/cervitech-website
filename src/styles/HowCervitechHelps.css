@@ -11,8 +11,8 @@
 
 .heading {
   text-align: center;
-  margin-bottom: 5rem;
-
+  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .heading span {
@@ -24,7 +24,7 @@
   font-weight: 500;
   font-size: 40px;
   text-align: center;
-  padding-bottom: 0.9rem;
+  padding-bottom: 1rem;
 }
 
 .heading p {
@@ -111,7 +111,7 @@
 
   .feature-text {
     margin-top: 1rem;
-    width:90%
+    width: 90%;
   }
 
   .how-helps {
@@ -134,53 +134,63 @@
   }
 }
 
-  @media (max-width: 600px) {
-    .how-helps{
-        width: 100%;
-        margin: 0rem auto;
-    }
-
-    .heading{
-      width: 100%;
-    }
-    .heading h1{
-
-        /* width: 100%; */
-       
-        text-align: center;
-        font-size: 32px;
-    }
-
-    .heading p{
-        font-size: 20px;
-    }
-    .features {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-
-    }
-    .feature {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      text-align: center;
-    }
-
-    .feature.exercise .feature-text,
-    .feature.response .feature-text {
-      margin-left: 0;
-    }
-
-    .feature .feature-text{
-        order: 2;
-        width: 90%
-    }
-    .feature img{
-        width: 300px;
-        order: 1
-    }
+@media (max-width: 600px) {
+  .how-helps {
+    width: 100%;
+    margin: 0rem auto;
+    padding: 4rem 2rem;
   }
 
+  .heading {
+    width: 100%;
+  }
+  .heading h1 {
+    /* width: 100%; */
+
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .heading p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .features {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .feature.exercise .feature-text,
+  .feature.response .feature-text {
+    margin-left: 0;
+  }
+
+  .feature-text p{
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .feature-text h1{
+    font-size: 28px;
+  }
+  .feature .feature-text {
+    order: 2;
+    width: 90%;
+  }
+  .feature img {
+    width: 300px;
+    order: 1;
+  }
+}
