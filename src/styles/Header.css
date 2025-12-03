@@ -137,7 +137,7 @@
 
 /*SMALL DEVICES*/
 @media(max-width: 700px){
-    .header{
+   /*  .header{
         margin: 0;
         margin-top: -3rem;
         padding: 2rem;
@@ -145,6 +145,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        
     }
     .header .iphone-pic{
         display: block;
@@ -152,7 +154,7 @@
         height: 200px;
         align-self: center;
         margin: auto;
-        margin-top: 2rem;
+        margin-top: 2rem;  
     }
     .left{
         margin-top: 1rem;
@@ -173,5 +175,40 @@
         margin-bottom: 0.1rem;
         font-size: 20px;
         width: 400px
-    }
+    } */
+     .header {
+    margin: 0;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left {
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 32px;         
+    width: 100%;              
+    max-width: 500px;        
+    line-height: 1.25;
+  }
+
+  .header p {
+    font-size: 18px;          
+    width: 100%;
+    max-width: 500px;        
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+
+  .header .iphone-pic {
+    width: 220px;
+    height: auto;
+    margin-top: 2rem;
+    align-self: center;
+  }
 }
