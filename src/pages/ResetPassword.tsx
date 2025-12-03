@@ -58,10 +58,11 @@ const ResetPassword: React.FC = () => {
 
     try {
       setBusy(true);
-      const resp = await axios.post(`${API_BASE}/auth/reset-password`, {
+      await axios.post(`${API_BASE}/auth/reset-password`, {
         newPassword,
         token,
       });
+
       setResetSuccess(true);
     } catch (err: any) {
       setMessage(

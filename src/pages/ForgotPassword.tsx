@@ -24,9 +24,10 @@ const ForgotPassword: React.FC = () => {
 
     try {
       setBusy(true);
-      const resp = await axios.post(`${API_BASE}/auth/request-reset`, {
+      await axios.post(`${API_BASE}/auth/request-reset`, {
         email: email.trim().toLowerCase(),
       });
+
       setEmailSent(true);
     } catch (err: any) {
       setMessage(err?.response?.data?.message || "Failed to send reset link.");
